@@ -1,0 +1,33 @@
+﻿@model CommunityAssist01.Models.Message
+@{
+    ViewBag.Title = "Result";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<p>@Html.DisplayTextFor(model => model.MessageText)</p>
+
+
+
+<!--  No need for the lambda expression here.  It seems that the lambda expression
+    is used only for the sake of passing certain arguments to methods such as
+    Html.DisplayTextFor.  There are situations where an expression containing a
+    variable will need to be placed in parentheses if Razor is to run without
+    crashing.  Here the parentheses are part of the if block syntax, but if I
+    wanted to get the variable on its own, the syntax would be:
+    [at symbol](!Model.Succeeded) .  -->
+@if (!Model.Succeeded)
+{
+    <div>
+        @Html.ActionLink("Try again", "Index", "NewPerson")<br /><br />
+    </div>
+}
+
+
+<div>
+    @Html.ActionLink("Home", "Index", "Home")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
