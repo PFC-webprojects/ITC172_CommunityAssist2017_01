@@ -14,13 +14,27 @@ namespace CommunityAssist01.Models
     public class Message
     {
         public bool Succeeded { get; set; }
-        public string MessageText
+
+        public string UserName { get; set; }
+
+        public string RegistrationText
         {
             get
             {
                 return Succeeded ?
                     "Thank you for registering." :
                     "Sorry, but something seems to have gone wrong with the registration.";
+            }
+        }
+
+        public string LoginText
+        {
+            get
+            {
+                return Succeeded ?
+                    "Welcome, " + UserName + ".  You may now make a donation or apply for a grant." :
+                    "Sorry, invalid login.  Please try to log in again, or, " +
+                    "if you have yet to register with us, then please do so.";
             }
         }
     }
