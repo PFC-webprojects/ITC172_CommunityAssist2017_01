@@ -1,0 +1,24 @@
+﻿@model CommunityAssist01.Models.Message
+@{
+    ViewBag.Title = "Result";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<p>@Html.DisplayTextFor(model => model.LoginText)</p>
+
+@if (!Model.Succeeded)
+{
+    <div>
+        @Html.ActionLink("Try again", "Index", "Login")<br />
+        @Html.ActionLink("Register", "Index", "NewPerson")<br /><br />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Home", "Index", "Home")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
