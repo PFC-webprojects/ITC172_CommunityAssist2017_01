@@ -155,7 +155,14 @@
     <Compile Include="Controllers\GrantTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\NewDonationController.cs" />
+=======
+<<<<<<< HEAD
+    <Compile Include="Controllers\NewDonationController.cs" />
+=======
+>>>>>>> 71ad8908f1e959c6d19ae59a056a292876927ec7
+>>>>>>> e499d0f295370ffd31ea4cdad325c702932afd1f
     <Compile Include="Controllers\NewPersonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -285,6 +292,10 @@
     <Content Include="Views\NewPerson\Result.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\Result.cshtml" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e499d0f295370ffd31ea4cdad325c702932afd1f
     <Content Include="Views\Donations\Create.cshtml" />
     <Content Include="Views\Donations\Delete.cshtml" />
     <Content Include="Views\Donations\Details.cshtml" />
@@ -292,8 +303,13 @@
     <Content Include="Views\Donations\Index.cshtml" />
     <Content Include="Views\NewDonation\Index.cshtml" />
     <Content Include="Views\NewDonation\Result.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\GrantApplications\Index.cshtml" />
     <Content Include="Views\GrantApplications\Result.cshtml" />
+=======
+=======
+>>>>>>> 71ad8908f1e959c6d19ae59a056a292876927ec7
+>>>>>>> e499d0f295370ffd31ea4cdad325c702932afd1f
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

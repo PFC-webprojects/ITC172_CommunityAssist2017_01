@@ -19,7 +19,11 @@ namespace CommunityAssist01.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index([Bind(Include = "Amount")] NewDonation nd)
         {
+<<<<<<< HEAD
             CommunityAssist2017Entities ca = new CommunityAssist2017Entities();
+=======
+            CommunityAssist2017Entities ca = new CommunityAssist2017Entities();  //  Am not using this?
+>>>>>>> e499d0f295370ffd31ea4cdad325c702932afd1f
             Message msg = new Message();
 
             msg.Succeeded  =  !(Session["PersonKey"] is null);
@@ -35,7 +39,11 @@ namespace CommunityAssist01.Controllers
 
                 return RedirectToAction("Result", msg);
             }
+<<<<<<< HEAD
             else  //  The user is not logged in.
+=======
+            else  //  The user is not logged in.  (I guess Session is a superglobal variable, as is $_SESSION in PHP?)
+>>>>>>> e499d0f295370ffd31ea4cdad325c702932afd1f
             {
                 return View("Result", msg);
             }

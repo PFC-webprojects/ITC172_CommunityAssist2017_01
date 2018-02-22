@@ -31,12 +31,26 @@ namespace CommunityAssist01.Models
         {
             get
             {
+<<<<<<< HEAD
                 return this.Succeeded ?
                     "Welcome, " + this.UserName + ".  You may now make a donation or apply for a grant." :
+=======
+<<<<<<< HEAD
+                return this.Succeeded ?
+                    "Welcome, " + this.UserName + ".  You may now make a donation or apply for a grant." :
+=======
+                return Succeeded ?
+                    "Welcome, " + UserName + ".  You may now make a donation or apply for a grant." :
+>>>>>>> 71ad8908f1e959c6d19ae59a056a292876927ec7
+>>>>>>> e499d0f295370ffd31ea4cdad325c702932afd1f
                     "Sorry, invalid login.  Please try to log in again, or, " +
                     "if you have yet to register with us, then please do so.";
             }
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e499d0f295370ffd31ea4cdad325c702932afd1f
 
         public string DonationText
         {
@@ -48,6 +62,7 @@ namespace CommunityAssist01.Models
                     "Please log in first.  Then we will be able to receive your donation.";
             }
         }
+<<<<<<< HEAD
 
         public string ApplicationText
         {
@@ -59,5 +74,9 @@ namespace CommunityAssist01.Models
                     "Please log in first.  Then we will be able to receive your grant request.";
             }
         }
+=======
+=======
+>>>>>>> 71ad8908f1e959c6d19ae59a056a292876927ec7
+>>>>>>> e499d0f295370ffd31ea4cdad325c702932afd1f
     }
 }
