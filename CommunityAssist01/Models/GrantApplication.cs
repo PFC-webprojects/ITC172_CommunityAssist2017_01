@@ -11,7 +11,8 @@ namespace CommunityAssist01.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class GrantApplication
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,7 +25,10 @@ namespace CommunityAssist01.Models
         public Nullable<int> PersonKey { get; set; }
         public Nullable<System.DateTime> GrantAppicationDate { get; set; }
         public Nullable<int> GrantTypeKey { get; set; }
+
+        [Range(1, 10000000000000000000, ErrorMessage = "Please enter a realistic grant request of at least $1.00.")]
         public decimal GrantApplicationRequestAmount { get; set; }
+
         public string GrantApplicationReason { get; set; }
         public Nullable<int> GrantApplicationStatusKey { get; set; }
         public Nullable<decimal> GrantApplicationAllocationAmount { get; set; }

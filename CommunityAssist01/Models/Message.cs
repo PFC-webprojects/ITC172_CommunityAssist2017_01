@@ -14,13 +14,49 @@ namespace CommunityAssist01.Models
     public class Message
     {
         public bool Succeeded { get; set; }
-        public string MessageText
+
+        public string UserName { get; set; }
+
+        public string RegistrationText
         {
             get
             {
-                return Succeeded ?
+                return this.Succeeded ?
                     "Thank you for registering." :
                     "Sorry, but something seems to have gone wrong with the registration.";
+            }
+        }
+
+        public string LoginText
+        {
+            get
+            {
+                return this.Succeeded ?
+                    "Welcome, " + this.UserName + ".  You may now make a donation or apply for a grant." :
+                    "Sorry, invalid login.  Please try to log in again, or, " +
+                    "if you have yet to register with us, then please do so.";
+            }
+        }
+
+        public string DonationText
+        {
+            get
+            {
+                return this.Succeeded ?
+                    "Thank you for your donation." :
+                    "We appreciate your interest in donating to Community Assist.  " +
+                    "Please log in first.  Then we will be able to receive your donation.";
+            }
+        }
+
+        public string ApplicationText
+        {
+            get
+            {
+                return this.Succeeded ?
+                    "Thank you for your grant application.  We will respond within three days." :
+                    "We appreciate your interest in applying for a grant from Community Assist.  " +
+                    "Please log in first.  Then we will be able to receive your grant request.";
             }
         }
     }
